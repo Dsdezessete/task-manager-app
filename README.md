@@ -1,46 +1,68 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Task Manager App
 
-## Available Scripts
+> Um aplicativo para gerenciar suas tarefas diárias de forma prática e eficiente.
 
-In the project directory, you can run:
+## Índice
 
-### `npm start`
+- [Sobre](#sobre)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Instalação](#instalação)
+- [Uso](#uso)
+- [Contribuição](#contribuição)
+- [Licença](#licença)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Sobre
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+O Task Manager App é uma aplicação desenvolvida em React e TypeScript, que permite aos usuários gerenciar suas tarefas diárias de forma eficiente. Com uma interface intuitiva, o aplicativo possibilita a criação, leitura, atualização e exclusão de tarefas. A aplicação utiliza o Expo, uma ferramenta que facilita o desenvolvimento de aplicativos React Native.
 
-### `npm test`
+## Funcionalidades
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Autenticação**: Permite que os usuários façam login e tenham acesso às suas tarefas.
+- **CRUD de Tarefas**: Crie, leia, atualize e exclua tarefas facilmente.
+- **Navegação**: Roteamento com `react-router-dom` para uma experiência de usuário fluida.
+- **Estilos Modernos**: Utilização de `styled-components` para um design limpo e responsivo.
 
-### `npm run build`
+## Tecnologias Utilizadas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React**: Biblioteca para a construção da interface.
+- **TypeScript**: Para segurança de tipos e melhor desenvolvimento.
+- **React Router**: Para navegação entre páginas.
+- **Styled Components**: Para estilização dos componentes da aplicação.
+- **Expo**: Um conjunto de ferramentas para o desenvolvimento de aplicativos React Native, facilitando a criação e a implementação de aplicações móveis.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Instalação
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Siga os passos abaixo para instalar e executar a aplicação localmente:
 
-### `npm run eject`
+1. Clone o repositório:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   ```bash
+   git clone https://github.com/Dsdezessete/task-manager-app.git
+Acesse o diretório do projeto:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+bash
+Copy code
+cd task-manager-app
+Instale as dependências:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+bash
+Copy code
+npm install
+Uso
+Para iniciar a aplicação, utilize o seguinte comando:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+bash
+Copy code
+npm start
+A aplicação estará disponível em http://localhost:3000.
 
-## Learn More
+Contribuição
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Faça um fork do projeto.
+Crie sua branch (git checkout -b feature/nome-da-sua-feature).
+Faça suas alterações e commit (git commit -m 'Adiciona uma nova feature').
+Faça push para a branch (git push origin feature/nome-da-sua-feature).
+Abra uma Pull Request.
