@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Login from './components/Login';
+import TaskManager from './components/TaskManager';
+import TaskForm from './components/TaskForm';
+import { TaskProvider } from './context/TaskContext';
+import App from './App';  // Esta é a importação do seu componente App
+import GlobalStyle from './styles/GlobalStyle';
 
-function App() {
+const isAuthenticated = () => {
+  return !!localStorage.getItem('authToken');
+};
+
+function MainApp() { // Renomeando a função para MainApp
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TaskProvider>
+      <GlobalStyle />
+      <Router>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route
+            path="/tasks"
+            element={isAuthenticated() ? <TaskManager /> : <Navigate to="/login" />} />
+          <Route
+            path="/add-task"
+            element={isAuthenticated() ? <TaskForm /> : <Navigate to="/login" />} />
+        </Routes>
+      </Router>
+    </TaskProvider>
   );
 }
 
-export default App;
+export default MainApp; // Exporte a nova função
